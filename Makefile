@@ -10,4 +10,5 @@ main.o : main.cpp add_nbo.h
 	g++ -c -o main.o main.cpp
 
 clean :
-	rm -f add_nbo*.o
+	rm -f add_nbo
+	rm -f *.o
