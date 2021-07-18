@@ -16,8 +16,7 @@ int main(int argc, char* argv[]){
     fp  = fopen(argv[1], "rb");
     fp2 = fopen(argv[2], "rb");
 
-    uint32_t bin;
-    uint32_t bin2;
+    uint32_t bin, bin2;
 
     fread(&bin, sizeof(uint32_t), 1, fp);
     fread(&bin2, sizeof(uint32_t), 1, fp2);
