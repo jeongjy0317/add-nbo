@@ -5,6 +5,13 @@
 #define ALLOWED_INPUT_PARAM 3
 
 int main(int argc, char* argv[]){
+    if(argc != ALLOWED_INPUT_PARAM){
+        bool isMore = (argc > ALLOWED_INPUT_PARAM);
+        int diffCount = (isMore) ? argc - ALLOWED_INPUT_PARAM : ALLOWED_INPUT_PARAM - argc;
+        printf("[ERR] File entered %d %s than allowed\nPlease check input again.", diffCount, (isMore)?"more":"less");
+        return 1;
+    }
+
     FILE *fp, *fp2;
     fp  = fopen(argv[1], "rb");
     fp2 = fopen(argv[2], "rb");
